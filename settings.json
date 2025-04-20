@@ -26,7 +26,10 @@
     "light": "One Light",
     "dark": "One Dark"
   },
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_fallbacks": ["D2Coding"],
   "terminal": {
-    "font_family": "JetBrainsMono Nerd Font"
+    "font_family": "JetBrainsMono Nerd Font",
+    "font_fallbacks": ["D2Coding"]
   }
 }
