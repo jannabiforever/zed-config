@@ -24,12 +24,9 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "Ayu Dark"
   },
-  "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_fallbacks": ["D2Coding"],
-  "terminal": {
-    "font_family": "JetBrainsMono Nerd Font",
-    "font_fallbacks": ["D2Coding"]
-  }
+  "buffer_font_family": "SF Mono",
+  // Pretty for Korean.
+  "buffer_font_fallbacks": ["D2Coding"]
 }
