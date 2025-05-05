@@ -14,7 +14,7 @@
     },
     "version": "2"
   },
-  "icon_theme": "JetBrains Icons Light",
+  "icon_theme": "Material Icon Theme",
   "features": {
     "edit_prediction_provider": "zed"
   },
