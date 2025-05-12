@@ -1,3 +1,5 @@
 // Only tracks configurations.
 conversations
 prompts
+
+*backup.json

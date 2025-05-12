@@ -7,17 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "assistant": {
+  "agent": {
     "default_model": {
-      "provider": "copilot_chat",
+      "provider": "openai",
       "model": "gpt-4o"
     },
     "version": "2"
   },
   "icon_theme": "Material Icon Theme",
-  "features": {
-    "edit_prediction_provider": "zed"
-  },
   "vim_mode": true,
   "ui_font_size": 16,
   "buffer_font_size": 16,
@@ -28,5 +25,9 @@
   },
   "buffer_font_family": "SF Mono",
   // Pretty for Korean.
-  "buffer_font_fallbacks": ["D2Coding"]
+  "buffer_font_fallbacks": ["D2Coding"],
+  "show_edit_predictions": true,
+  "edit_predictions": {
+    "mode": "subtle"
+  }
 }
