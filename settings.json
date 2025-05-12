@@ -14,6 +14,9 @@
     },
     "version": "2"
   },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "icon_theme": "Material Icon Theme",
   "vim_mode": true,
   "ui_font_size": 16,
@@ -26,8 +29,5 @@
   "buffer_font_family": "SF Mono",
   // Pretty for Korean.
   "buffer_font_fallbacks": ["D2Coding"],
-  "show_edit_predictions": true,
-  "edit_predictions": {
-    "mode": "subtle"
-  }
+  "show_edit_predictions": true
 }
