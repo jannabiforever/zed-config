@@ -24,6 +24,7 @@
       "alt": true,
     },
   },
+  "relative_line_numbers": "enabled",
   "agent": {
     "notify_when_agent_waiting": "all_screens",
   },
@@ -110,7 +111,6 @@
     "**/.ruff_cache",
   ],
   "vim": {
-    "toggle_relative_line_numbers": true,
     "show_edit_predictions_in_normal_mode": true,
   },
   "auto_install_extensions": {
