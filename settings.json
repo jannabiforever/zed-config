@@ -1,33 +1,137 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "agent": {
-    "default_model": {
-      "provider": "openai",
-      "model": "gpt-4o"
-    },
-    "version": "2"
-  },
-  "features": {
-    "edit_prediction_provider": "zed"
-  },
-  "icon_theme": "Material Icon Theme",
-  "vim_mode": true,
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
   "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Ayu Dark"
+    "mode": "light",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha",
   },
-  "buffer_font_family": "SF Mono",
-  // Pretty for Korean.
-  "buffer_font_fallbacks": ["D2Coding"],
-  "show_edit_predictions": true
+  "vim_mode": true,
+  "buffer_font_size": 12,
+  "ui_font_size": 12,
+  "close_on_file_delete": true,
+  "code_lens": "on",
+  "minimap": {
+    "show": "auto",
+    "display_in": "all_editors",
+  },
+  "search": {
+    "regex": true,
+  },
+  "seed_search_query_from_cursor": "selection",
+  "inlay_hints": {
+    "enabled": true,
+    "toggle_on_modifiers_press": {
+      "control": true,
+      "alt": true,
+    },
+  },
+  "agent": {
+    "notify_when_agent_waiting": "all_screens",
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+    },
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy",
+        },
+        "cargo": {
+          "allFeatures": true,
+          "loadOutDirsFromCheck": true,
+          "buildScripts": {
+            "enable": true,
+          },
+        },
+        "procMacro": {
+          "enable": true,
+          "ignored": {
+            "async-trait": ["async_trait"],
+            "napi-derive": ["napi"],
+            "async-recursion": ["async_recursion"],
+          },
+        },
+        "rust": {
+          "analyzerTargetDir": true,
+        },
+        "inlayHints": {
+          "maxLength": null,
+          "lifetimeElisionHints": {
+            "enable": "skip_trivial",
+            "useParameterNames": true,
+          },
+          "closureReturnTypeHints": {
+            "enable": "always",
+          },
+        },
+      },
+    },
+  },
+  "languages": {
+    "Python": {
+      "code_actions_on_format": {
+        "source.fixAll.ruff": true,
+      },
+    },
+    "Rust": {
+      "semantic_tokens": "combined",
+      "document_folding_ranges": "on",
+    },
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+      },
+    },
+  },
+  "file_types": {
+    "Dockerfile": ["Dockerfile*"],
+  },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    "**/.vscode",
+    "**/.idea",
+    "**/.serverless",
+    "**/build",
+    "**/dist",
+    "**/coverage",
+    "**/.venv",
+    "**/__pycache__",
+    "**/.ropeproject",
+    "**/.pytest_cache",
+    "**/.ruff_cache",
+  ],
+  "vim": {
+    "toggle_relative_line_numbers": true,
+    "show_edit_predictions_in_normal_mode": true,
+  },
+  "auto_install_extensions": {
+    "html": true,
+    "Git Firefly": true,
+    "TOML": true,
+    "Catppuccin": true,
+    "Dockerfile": true,
+    "Svelte": true,
+    "LOG": true,
+    "LaTeX": true,
+    "Nix": true,
+    "VSCode Icons": true,
+    "Svelte Snippets": true,
+    "Rust Snippets": true,
+    "MDX": true,
+    "SurrealDB SurrealQL Language Extension": true,
+  },
+  "icon_theme": "VSCode Icons for Zed (Light)",
+  "which_key": {
+    "enabled": true,
+    "delay_ms": 0,
+  },
 }

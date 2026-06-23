@@ -1,0 +1,72 @@
+[
+  {
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-k cmd-r": "editor::RestartLanguageServer",
+    },
+  },
+  {
+    "context": "Editor",
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-k p": "workspace::CopyPath",
+    },
+  },
+  {
+    "context": "Workspace",
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-ctrl-b": "git::Branch",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "use_key_equivalents": true,
+    "bindings": {
+      "ctrl-w": null,
+      "space": null,
+    },
+  },
+  {
+    "context": "Dock || Terminal || Editor || ProjectPanel || AssistantPanel || CollabPanel || OutlinePanel || ChatPanel || VimControl || EmptyPane || SharedScreen || MarkdownPreview || KeyContextView || Diagnostics",
+    "bindings": {
+      "cmd-d": "pane::SplitRight",
+      // Navigate between panes (vim-style)
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      // Resize panes
+      "ctrl-right": "vim::ResizePaneRight",
+      "ctrl-left": "vim::ResizePaneLeft",
+      "ctrl-down": "vim::ResizePaneDown",
+      "ctrl-up": "vim::ResizePaneUp",
+      // Tab navigation
+      "alt-right": "pane::ActivateNextItem",
+      "alt-left": "pane::ActivatePreviousItem",
+      "alt-,": "pane::SwapItemLeft",
+      "alt-.": "pane::SwapItemRight",
+      "alt-p": "pane::TogglePinTab",
+    },
+  },
+
+  {
+    "context": "ProjectPanel || EmptyPane || (Editor && VimControl && !VimWaiting && !menu)",
+    "bindings": {
+      "cmd-shift-s": "workspace::SaveWithoutFormat",
+      // Buffers & Tabs
+      "space ,": "tab_switcher::OpenInActivePane",
+      // Git
+      "space G": "git_panel::ToggleFocus",
+      "cmd-shift-g": "git_panel::ToggleFocus",
+      // File explorer & tools
+      "space e": "workspace::ToggleLeftDock",
+      // Search & Diagnostics
+      "space s d": "diagnostics::Deploy",
+      // Projects
+      "space f p": "projects::OpenRecent",
+      // Notifications
+      "space u n": "workspace::ClearAllNotifications",
+    },
+  },
+]
