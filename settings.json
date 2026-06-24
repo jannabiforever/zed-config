@@ -17,13 +17,6 @@
     "regex": true,
   },
   "seed_search_query_from_cursor": "selection",
-  "inlay_hints": {
-    "enabled": true,
-    "toggle_on_modifiers_press": {
-      "control": true,
-      "alt": true,
-    },
-  },
   "relative_line_numbers": "enabled",
   "agent": {
     "notify_when_agent_waiting": "all_screens",
