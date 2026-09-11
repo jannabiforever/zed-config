@@ -1,0 +1,16 @@
+[
+  {
+    "label": "zed fonts: desk",
+    "command": "python",
+    "args": ["~/.local/bin/zed-fonts.py", "desk"],
+    "reveal": "never",
+    "hide": "always",
+  },
+  {
+    "label": "zed fonts: laptop",
+    "command": "python",
+    "args": ["~/.local/bin/zed-fonts.py", "laptop"],
+    "reveal": "never",
+    "hide": "always",
+  },
+]

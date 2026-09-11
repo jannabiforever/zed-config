@@ -1,72 +1,25 @@
 [
   {
-    "use_key_equivalents": true,
+    "context": "!Terminal && !(Editor && !(vim_mode == normal || vim_mode == visual))",
     "bindings": {
-      "cmd-k cmd-r": "editor::RestartLanguageServer",
+      "space": null,
+      "space k r": "editor::RestartLanguageServer",
+      "space g v": "git_panel::ToggleFocus",
+      "space d v": "diagnostics::Deploy",
+      "space p v": "project_panel::ToggleFocus",
     },
   },
   {
-    "context": "Editor",
-    "use_key_equivalents": true,
+    "context": "ProjectPanel && not_editing",
     "bindings": {
-      "cmd-k p": "workspace::CopyPath",
-    },
-  },
-  {
-    "context": "Workspace",
-    "use_key_equivalents": true,
-    "bindings": {
-      "cmd-ctrl-b": "git::Branch",
+      "space c": "project_panel::CollapseAllEntries",
+      "space e": "project_panel::ExpandSelectedEntry",
     },
   },
   {
     "context": "Editor && vim_mode == normal",
-    "use_key_equivalents": true,
     "bindings": {
-      "ctrl-w": null,
-      "space": null,
-    },
-  },
-  {
-    "context": "Dock || Terminal || Editor || ProjectPanel || AssistantPanel || CollabPanel || OutlinePanel || ChatPanel || VimControl || EmptyPane || SharedScreen || MarkdownPreview || KeyContextView || Diagnostics",
-    "bindings": {
-      "cmd-d": "pane::SplitRight",
-      // Navigate between panes (vim-style)
-      "ctrl-h": "workspace::ActivatePaneLeft",
-      "ctrl-l": "workspace::ActivatePaneRight",
-      "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown",
-      // Resize panes
-      "ctrl-right": "vim::ResizePaneRight",
-      "ctrl-left": "vim::ResizePaneLeft",
-      "ctrl-down": "vim::ResizePaneDown",
-      "ctrl-up": "vim::ResizePaneUp",
-      // Tab navigation
-      "alt-right": "pane::ActivateNextItem",
-      "alt-left": "pane::ActivatePreviousItem",
-      "alt-,": "pane::SwapItemLeft",
-      "alt-.": "pane::SwapItemRight",
-      "alt-p": "pane::TogglePinTab",
-    },
-  },
-
-  {
-    "context": "ProjectPanel || EmptyPane || (Editor && VimControl && !VimWaiting && !menu)",
-    "bindings": {
-      "cmd-shift-s": "workspace::SaveWithoutFormat",
-      // Buffers & Tabs
-      "space ,": "tab_switcher::OpenInActivePane",
-      // Git
-      "space G": "git_panel::ToggleFocus",
-      "cmd-shift-g": "git_panel::ToggleFocus",
-      // File explorer & tools
-      "space e": "workspace::ToggleLeftDock",
-      // Search & Diagnostics
-      "space s d": "diagnostics::Deploy",
-      // Projects
-      "space f p": "projects::OpenRecent",
-      // Notifications
-      "space u n": "workspace::ClearAllNotifications",
+      "space e m": "editor::ExpandMacroRecursively",
     },
   },
 ]

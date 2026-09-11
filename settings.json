@@ -1,20 +1,30 @@
 {
+  "edit_predictions": {
+    "mode": "subtle",
+  },
   "agent_servers": {
     "claude-acp": {
+      "favorite_config_option_values": {
+        "mode": ["bypassPermissions"],
+      },
+      "default_config_options": {
+        "fast": true,
+        "effort": "max",
+        "mode": "bypassPermissions",
+      },
       "type": "registry",
     },
   },
+  "load_direnv": "direct",
   "cli_default_open_behavior": "new_window",
   "theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Catppuccin Latte",
-    "dark": "Catppuccin Mocha",
+    "dark": "Ayu Mirage",
   },
   "vim_mode": true,
-  "buffer_font_size": 12,
-  "ui_font_size": 12,
+
   "close_on_file_delete": true,
-  "code_lens": "on",
   "minimap": {
     "show": "auto",
     "display_in": "all_editors",
@@ -25,10 +35,17 @@
   "seed_search_query_from_cursor": "selection",
   "relative_line_numbers": "enabled",
   "agent": {
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-fable-5",
+      "enable_thinking": true,
+      "effort": "high",
+    },
     "notify_when_agent_waiting": "all_screens",
     "inline_assistant_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-6",
+      "provider": "anthropic",
+      "model": "claude-sonnet-5",
+      "effort": "High",
     },
   },
   "diagnostics": {
@@ -51,11 +68,6 @@
         },
         "procMacro": {
           "enable": true,
-          "ignored": {
-            "async-trait": ["async_trait"],
-            "napi-derive": ["napi"],
-            "async-recursion": ["async_recursion"],
-          },
         },
         "rust": {
           "analyzerTargetDir": true,
@@ -72,9 +84,20 @@
         },
       },
     },
+    "basedpyright": {
+      "settings": {
+        "typeCheckingMode": "off",
+      },
+    },
   },
   "languages": {
     "Python": {
+      "formatter": {
+        "external": {
+          "command": "ruff",
+          "arguments": ["format", "--stdin-filename", "{buffer_path}"],
+        },
+      },
       "code_actions_on_format": {
         "source.fixAll.ruff": true,
       },
@@ -87,6 +110,15 @@
       "code_actions_on_format": {
         "source.organizeImports": true,
       },
+    },
+    "Markdown": {
+      "format_on_save": "on",
+    },
+    "JSON": {
+      "format_on_save": "on",
+    },
+    "JSONC": {
+      "format_on_save": "on",
     },
   },
   "file_types": {
@@ -101,7 +133,6 @@
     "**/Thumbs.db",
     "**/.classpath",
     "**/.settings",
-    "**/.vscode",
     "**/.idea",
     "**/.serverless",
     "**/build",
@@ -132,9 +163,21 @@
     "MDX": true,
     "SurrealDB SurrealQL Language Extension": true,
   },
-  "icon_theme": "VSCode Icons for Zed (Light)",
+  "icon_theme": "VSCode Icons for Zed (Dark)",
   "which_key": {
     "enabled": true,
     "delay_ms": 0,
+  },
+
+  // font fallbacks for korean
+  "buffer_font_size": 11,
+  "buffer_font_family": ".ZedMono",
+  "buffer_font_fallbacks": [".ZedMono"],
+  "ui_font_size": 11,
+  "ui_font_family": ".ZedMono",
+  "ui_font_fallbacks": [".ZedMono"],
+  "terminal": {
+    "font_size": 11,
+    "font_family": ".ZedMono",
   },
 }
